@@ -9,17 +9,17 @@ export function Hero() {
             <Overlay color="#000" opacity={0.65} zIndex={1} />
 
             <div className={classes.inner}>
-                <Title className={classes.title}>
-                    Bringing your business into an {' '}
-                    <br/>
+                <Title className={classes.title} >
+                    Empowering South Australian Small Businesses {' '}
+                    <br />
                     <Text component="span" inherit className={classes.highlight}>
-                        online reality
+                        Through Digital Innovation
                     </Text>
                 </Title>
 `
                 <Container size={640}>
                     <Text size="lg" className={classes.description}>
-                        <Text component='span' fw="bold">Launch Online SA</Text> is an initiative to help small businesses in South Australia get their first web application to leverage technology to get more clients or streamline their operations.
+                        <Text component='span' fw="bold">Launch Online SA</Text> is a community initiative dedicated to helping South Australian small businesses establish their digital presence. We provide professional web development services at no cost, supporting local businesses in their journey toward digital transformation.
                     </Text>
                 </Container>
 

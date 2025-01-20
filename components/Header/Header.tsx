@@ -9,10 +9,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  { link: "/", label: "Home" },
-  { link: "#about", label: "About" },
-  { link: "#FAQ", label: "FAQ" },
-  { link: "#contact", label: "Contact" },
+  // { link: "/", label: "Home" },
+  { link: "/#about", label: "About" },
+  { link: "/#FAQ", label: "FAQ" },
+  { link: "/#contact", label: "Contact" },
+  { link: "/legal-terms", label: "Legal Terms" },
 ];
 
 export function Header() {
