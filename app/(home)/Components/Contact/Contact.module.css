@@ -29,3 +29,10 @@
     height: auto;
     object-fit: contain;
   }
+
+.modalTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+

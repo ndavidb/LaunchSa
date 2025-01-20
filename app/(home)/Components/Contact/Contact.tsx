@@ -22,7 +22,7 @@ import {useDisclosure} from "@mantine/hooks";
 interface ContactFormValues {
   name: string;
   email: string;
-  businessName: string;
+  // businessName: string;
   message: string;
 }
 
@@ -34,13 +34,13 @@ export function ContactSection({ className }: { className?: string }) {
     initialValues: {
       name: '',
       email: '',
-      businessName: '',
+      // businessName: '',
       message: '',
     },
     validate: {
       name: hasLength({min: 3, max: 40}, "Your name must be between 3 and 40 characters"),
       email: isEmail('Invalid email'),
-      businessName: hasLength({min: 3, max: 40}, "Your business name must be at least 3 characters"),
+      // businessName: hasLength({min: 3, max: 40}, "Your business name must be at least 3 characters"),
     },
   });
 
@@ -49,7 +49,7 @@ export function ContactSection({ className }: { className?: string }) {
       const { error } = await supabase
           .from('applicants')
           .insert([
-            {user_name: values.name, user_email: values.email, business_name: values.businessName, message: values.message}
+            {user_name: values.name, user_email: values.email, message: values.message}
           ])
           .select();
 
@@ -87,7 +87,13 @@ export function ContactSection({ className }: { className?: string }) {
 
               <form onSubmit={form.onSubmit(handleSubmit)}>
                 <Stack gap="md">
-                  <Modal opened={opened} onClose={close} title="Form Submission" centered={true}>
+                  <Modal classNames={{
+                    title: classes.modalTitle,
+
+                  }} opened={opened} onClose={close} title="Form Submission" centered={true} overlayProps={{
+                    backgroundOpacity: 0.55,
+                    blur: 3,
+                  }}>
                     Your applications has been submitted successfully. We will get back to you in the following 3 business days.
                   </Modal>
                     <TextInput
@@ -104,12 +110,12 @@ export function ContactSection({ className }: { className?: string }) {
                         {...form.getInputProps('email')}
                     />
 
-                    <TextInput
-                        placeholder="Business Name"
-                        withAsterisk
-                        size="md"
-                        {...form.getInputProps('businessName')}
-                    />
+                    {/*<TextInput*/}
+                    {/*    placeholder="Business Name"*/}
+                    {/*    withAsterisk*/}
+                    {/*    size="md"*/}
+                    {/*    {...form.getInputProps('businessName')}*/}
+                    {/*/>*/}
 
                     <Textarea
                         placeholder="Your Message"
@@ -117,7 +123,7 @@ export function ContactSection({ className }: { className?: string }) {
                         size="md"
                         {...form.getInputProps('message')}
                     />
-
+                  <Space h="lg"/>
                   <Button
                       type="submit"
                       color="#fd1638"
