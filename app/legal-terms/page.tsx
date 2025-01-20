@@ -1,6 +1,5 @@
 ﻿"use client";
-import { Container, Text, Title, List, ThemeIcon, Box } from '@mantine/core';
-import { IconCircleCheck } from '@tabler/icons-react';
+import { Container, Text, Title, List} from '@mantine/core';
 
 export default function LegalPage() {
         return (
