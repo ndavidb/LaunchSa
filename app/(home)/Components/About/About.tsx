@@ -48,15 +48,15 @@ export function AboutSection({className}: { className?: string }) {
                                 free web development services to help our community grow together.
                                 <Space h="md"/>
 
-                                As a software engineer, I've seen how digital presence can transform
+                                As a software engineer, I&apos;ve seen how digital presence can transform
                                 small businesses, but I also understand that the initial cost of web development can be
-                                a barrier. That's why Launch Online SA offers free web application development to help
+                                a barrier. That&apos;s why Launch Online SA offers free web application development to help
                                 our local businesses take their first steps online.
                                 <Space h="md"/>
                                 This initiative focuses on creating simple, effective web solutions using modern
                                 technology. <Text fw={700} component="span" > While participants need to cover their own hosting and domain costs, the
                                 development service is provided at no charge as part of our commitment to strengthening
-                                South Australia's small business community.</Text>
+                                South Australia&apos;s small business community.</Text>
                             </Text>
 
 
