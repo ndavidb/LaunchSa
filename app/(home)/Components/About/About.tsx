@@ -25,7 +25,7 @@ export function AboutSection({className}: { className?: string }) {
                 <Grid gutter={60}>
                     <Grid.Col span={{base: 12, md: 6}} className={classes.imageWrapper}>
                         <Image
-                            src="/Images/about-image.png"
+                            src="/Images/about-image.webp"
                             width={500}
                             height={500}
                             alt="Person using phone"

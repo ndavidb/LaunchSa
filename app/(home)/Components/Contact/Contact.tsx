@@ -136,7 +136,7 @@ export function ContactSection({ className }: { className?: string }) {
 
           <Grid.Col span={{ base: 12, md: 6 }} className={classes.imageWrapper}>
             <Image
-              src="/Images/contact-image.png"
+              src="/Images/contact-image.webp"
               width={500}
               height={500}
               alt="Person using phone"
