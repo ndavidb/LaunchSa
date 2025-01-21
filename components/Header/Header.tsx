@@ -1,9 +1,19 @@
 ﻿"use client";
 
-import { IconSearch } from "@tabler/icons-react";
-import { Autocomplete, Burger, Container, Group } from "@mantine/core";
+import {IconChevronDown, IconSearch} from "@tabler/icons-react";
+import {
+  Autocomplete,
+  Box,
+  Burger, Button,
+  Center, Collapse,
+  Container, Divider,
+  Drawer,
+  Group,
+  Menu,
+  ScrollArea, Stack,
+  UnstyledButton, useMantineTheme
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-// import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,6 +28,9 @@ const links = [
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
+  const theme = useMantineTheme();
 
   const items = links.map((link) => (
     <a
@@ -30,19 +43,12 @@ export function Header() {
   ));
 
   return (
-    <Container size="xl">
+    <Container size="xl" pos="sticky">
       <header className={classes.header}>
         <div className={classes.inner}>
           <Group>
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              size="sm"
-              hiddenFrom="sm"
-            />
-            <Link href="/"><Image src="/logo.svg" alt="Logo" width={150} height={80} /></Link>
+            <Link href="/"><Image src="/logo.svg" alt="Logo" width={150} height={80}/></Link>
           </Group>
-
           <Group>
             <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
               {items}
