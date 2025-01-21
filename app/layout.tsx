@@ -13,7 +13,7 @@ import { Footer } from "../components/Footer/Footer";
 
 export const metadata = {
   title: "Launch Online SA",
-  description: "I am using Mantine with Next.js!",
+  description: "Initiative to help small businesses in SA to launch online",
 };
 
 const inter = Inter({
