@@ -14,6 +14,13 @@ import { Footer } from "../components/Footer/Footer";
 export const metadata = {
   title: "Launch Online SA",
   description: "Initiative to help small businesses in SA to launch online",
+  author: "David Bello",
+  keywords: [
+    "Launch Online SA",
+    "Small Business",
+    "Digital Innovation",
+    "Launch Online SA Initiative",
+    "Launch Online SA SA"],
   openGraph: {
     title: "Launch Online SA",
     description: "Initiative to help small businesses in SA to launch online",
